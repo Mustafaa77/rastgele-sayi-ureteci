@@ -32,5 +32,5 @@ class RNG:
 # Test Kısmı
 if __name__ == "__main__":
     seed_val = input("Seed girin (Örn: Okul No): ")
-    rng = KralRNG(seed_val)
+    rng = RNG(seed_val)
     print(f"\nÜretilen 64-bit Dizi: {rng.generate_sequence(64)}")
