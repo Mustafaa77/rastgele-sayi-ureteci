@@ -1,0 +1,16 @@
+[BAŞLAT] --> [Seed Al & Hashle]
+               |
+               v
+     /--- [Sayı Çift mi?] --EVET--> [n = n / 2]
+     |         |                     |
+     |       HAYIR                   v
+     |         |           [Von Neumann Filtresi]
+     |         v                     |
+     |    [n = 3n + Maske]           |
+     |         |                     v
+     \---------<---------- [Uygun Bit mi? (01/10)]
+                                     |
+                                   EVET
+                                     |
+                                     v
+                                [Çıktı Bit]
