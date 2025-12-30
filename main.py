@@ -1,7 +1,7 @@
 import hashlib
 import time
 
-class KralRNG:
+class RNG:
     def __init__(self, seed):
         self.state = int(hashlib.sha256(str(seed).encode()).hexdigest(), 16)
         self.counter = 0
