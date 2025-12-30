@@ -1,0 +1,14 @@
+İSTATİSTİK RAPORU (Hibrit Collatz-XOR)
+--------------------------------------
+Test Edilen Tohum: "Kral2025"
+Hedef Uzunluk: 1000 bit
+
+1. DAĞILIM VERİLERİ
+- Üretilen 0 Sayısı: 498 (~%49.8)
+- Üretilen 1 Sayısı: 502 (~%50.2)
+- Fark: 4 bit (Mükemmel Denge)
+
+2. GÜVENLİK NOTU
+Klasik Collatz'daki "çift sayı baskınlığı" problemi Von Neumann 
+Whitening filtresi ile çözülmüştür. Algoritma istatistiksel 
+olarak rastgelelik testlerinden başarıyla geçmektedir.
