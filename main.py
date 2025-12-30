@@ -6,7 +6,6 @@ class RNG:
         self.state = int(hashlib.sha256(str(seed).encode()).hexdigest(), 16)
         self.counter = 0
 
-    
     def next_bit(self):
         while True:
             self.counter += 1
