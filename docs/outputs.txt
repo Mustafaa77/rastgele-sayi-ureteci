@@ -1,2 +1,5 @@
-Test 1 (Seed: 12345): 101100101011... (Kikare: 0.04)
-Test 2 (Seed: "Kral"): 110010101101... (Kikare: 0.16)
+--- ÖRNEK ÇIKTI RAPORU ---
+Kullanılan Seed: 235541012
+Üretilen Bit Sayısı: 1000
+Sonuç: BAŞARILI (Kikare: 0.0040)
+Dizi Önizleme: 010110010110... (main.py üzerinden tam dizi üretilebilir)
