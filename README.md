@@ -1,6 +1,6 @@
 # Hibrit Collatz-XOR Rastgele Sayı Üreteci (RSÜ)
 
-Bu proje, Beyzanur Hoca'nın Bilgi Sistemleri Güvenliği dersi için hazırlanmıştır.
+Bu proje Bilgi Sistemleri Güvenliği dersi için hazırlanmıştır.
 
 ## Algoritma Mantığı
 Algoritma, matematiksel kaos teorisinin bir örneği olan **Collatz Sanısı** üzerine kurulmuştur. Ancak klasik Collatz'ın istatistiksel zayıflıklarını gidermek için şu eklemeler yapılmıştır:
