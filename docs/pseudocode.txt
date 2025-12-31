@@ -1,21 +1,16 @@
-BAŞLA
-  GİRDİ: Anahtar_Metni (Seed)
-  DURUM = Hash(Anahtar_Metni) // Başlangıç entropisi
-  
-  FONKSİYON NextBit():
-    SAYAC = SAYAC + 1
-    EĞER (DURUM çift) İSE:
-       DURUM = DURUM / 2
-    DEĞİLSE:
-       MASKE = (DURUM XOR 0xFF)
-       DURUM = (3 * DURUM) + MASKE
-    
-    // Von Neumann Whitening
-    BIT1 = DURUM'un 3. biti
-    BIT2 = DURUM'un 7. biti
-    EĞER (BIT1 != BIT2) İSE:
-       DÖNDÜR BIT1
-    DEĞİLSE:
-       Tekrar dene (Recursive call)
-  FONKSİYON BİTİR
-BİTİR
+GİRDİ: Seed_Değeri
+DURUM = Hash(Seed_Değeri)
+
+DÖNGÜ (İstenen Bit Sayısına Ulaşana Kadar):
+   SAYAÇ += 1
+   EĞER DURUM çift İSE:
+      DURUM = DURUM / 2
+   DEĞİLSE:
+      DURUM = (3 * DURUM) + (DURUM XOR 0xABCDEF)
+   
+   EĞER DURUM <= 1 İSE:
+      DURUM = Hash(SAYAÇ)
+
+   B1 = DURUM'un 3. biti, B2 = DURUM'un 7. biti
+   EĞER B1 != B2 İSE:
+      BİT_EKLE(B1)
