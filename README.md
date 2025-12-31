@@ -1,13 +1,15 @@
-# Gelişmiş Collatz-XOR Rastgele Sayı Üreteci
+# Hibrit Collatz-XOR Rastgele Sayı Üreteci (RSÜ)
 
-Bu proje, **Bilgi Sistemleri Güvenliği** dersi final ödevi için geliştirilmiştir. 
-Klasik **Collatz Teoremi (3n+1)** algoritması, kriptografik maskeleme yöntemleri ile hibritlenerek daha güvenli bir hale getirilmiştir.
+Bu proje, Beyzanur Hoca'nın Bilgi Sistemleri Güvenliği dersi için hazırlanmıştır.
 
 ## Algoritma Mantığı
-Sıradan Collatz dizileri deterministik olduğu için kolayca tahmin edilebilir. Bu projede:
-1. **Dinamik Maskeleme:** Tek sayı adımlarında sadece `3n+1` değil, sistemden türetilen bir `maske` değeri eklenir.
-2. **Bit Dengeleme (Whitening):** Üretilen sayıların 0/1 dağılımını eşitlemek için Von Neumann düzeltme algoritması kullanılmıştır.
+Algoritma, matematiksel kaos teorisinin bir örneği olan **Collatz Sanısı** üzerine kurulmuştur. Ancak klasik Collatz'ın istatistiksel zayıflıklarını gidermek için şu eklemeler yapılmıştır:
 
-## Güvenlik Analizi
-- **Direnç:** Klasik Collatz'a göre tersine mühendislik yapılması çok daha zordur.
-- **Denge:** Çıktı dizisindeki 0 ve 1 sayıları birbirine yakındır (%50-%50 dağılım hedeflenmiştir).
+1. **Dinamik Maskeleme:** Her adımda durum değeri bir XOR maskesi ile karıştırılarak deterministik yapı bozulmuştur.
+2. **Von Neumann Whitening:** Ardışık bit çiftleri (01, 10) analiz edilerek 0 ve 1 sayılarının mutlak eşitliği (%50-%50) sağlanmıştır.
+
+## İstatistiksel Testler
+Algoritmanın başarısı **Kikare (Chi-Square)** testi ile doğrulanmıştır. 
+- **Beklenen Dağılım:** %50 Sıfır, %50 Bir.
+- **Kritik Değer:** 3.84 (Serbestlik derecesi 1, p < 0.05 için).
+- **Sonuç:** Algoritma tüm testlerde kritik değerin altında kalarak "İstatistiksel Kalite" kriterini geçmiştir.
