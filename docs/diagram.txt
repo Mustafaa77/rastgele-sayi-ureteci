@@ -1,16 +1,13 @@
-[BAŞLAT] --> [Seed Al & Hashle]
+[Başlat] --> [Seed Al & Hash]
                |
                v
-     /--- [Sayı Çift mi?] --EVET--> [n = n / 2]
-     |         |                     |
-     |       HAYIR                   v
-     |         |           [Von Neumann Filtresi]
-     |         v                     |
-     |    [n = 3n + Maske]           |
-     |         |                     v
-     \---------<---------- [Uygun Bit mi? (01/10)]
-                                     |
-                                   EVET
-                                     |
-                                     v
-                                [Çıktı Bit]
+     /--- [Çift mi?] --EVET--> [n = n / 2]
+     |         |
+     |       HAYIR
+     |         |
+     |    [n = 3n + XOR_Mask]
+     |         |
+     \---------<---------- [Von Neumann Filtresi (B1 != B2?)]
+                               |
+                               v
+                         [Çıktı Bit Yaz] --> [Kikare Testi Yap]
